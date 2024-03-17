@@ -1,5 +1,9 @@
-export function server(app) {
-  return app.listen(3000, () => {
-    console.log('Server is running on port 3000🚀')
+import { APP_PORT } from './app/env.js'
+
+export default function server(app) {
+  const message = `🚀 Server is running on port: ${APP_PORT}`
+
+  app.listen(APP_PORT, () => {
+    console.log(message)
   })
 }
