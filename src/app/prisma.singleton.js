@@ -1,11 +1,11 @@
-import { PrismaClient } from '@prisma/client'
+// import { PrismaClient } from '@prisma/client'
 
-let prisma
+// let prisma
 
-export default function prismaSingleton() {
-  if (!prisma) {
-    prisma = new PrismaClient()
-  }
+// export default function prismaSingleton() {
+//   if (!prisma) {
+//     prisma = new PrismaClient()
+//   }
 
-  return prisma
-}
+//   return prisma
+// }

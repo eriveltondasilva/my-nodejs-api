@@ -1,12 +1,12 @@
+import { APP_HOST } from '../app/env.js'
+
 function getWelcome(_, res) {
   res.send({
-    message: 'Hello World!',
+    welcome: 'Hello World!',
+    separator: '--------------------',
     title: 'API DOCUMENTATION',
-    get_all_books: ['http://localhost:3000/api/books', 'GET'],
-    get_book_by_id: ['http://localhost:3000/api/books/1', 'GET'],
-    create_book: ['http://localhost:3000/api/books', 'POST'],
-    update_book: ['http://localhost:3000/api/books/1', 'PUT'],
-    delete_book: ['http://localhost:3000/api/books/1', 'DELETE'],
+    get_all_books: [`${APP_HOST}/api/books`, 'GET'],
+    get_book_by_id: [`${APP_HOST}/api/books/1`, 'GET'],
   })
 }
 
