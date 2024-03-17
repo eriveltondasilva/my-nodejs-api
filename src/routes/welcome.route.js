@@ -1,9 +1,9 @@
 import { Router } from 'express'
+import welcomeController from '../controllers/welcome.controller.js'
 
 const router = Router()
+const { getWelcome } = welcomeController
 
-router.get('/', (_, res) => {
-  res.send({ message: 'Hello World!' })
-})
+router.get('/', getWelcome)
 
 export default router
