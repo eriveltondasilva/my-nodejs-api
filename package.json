@@ -2,14 +2,22 @@
   "name": "my-nodejs-api",
   "version": "1.0.0",
   "description": "",
+  "author": {
+    "name": "Erivelton Silva",
+    "email": "eriveltondasilva13@gmail.com",
+    "url": "https://github.com/eriveltondasilva"
+  },
   "type": "module",
   "main": "index.js",
   "scripts": {
     "postinstall": "prisma generate",
-    "dev": "node --env-file=.env --watch --no-warnings src/index.js"
+    "dev": "node --env-file=.env --watch --no-warnings src/index.js",
+    "prisma:reset": "npx prisma migrate reset",
+    "prisma:seed": "npx prisma db seed"
   },
-  "keywords": [],
-  "author": "",
+  "prisma": {
+    "seed": "node prisma/seed/index.js"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.28",
