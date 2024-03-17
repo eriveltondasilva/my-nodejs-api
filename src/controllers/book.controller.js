@@ -3,7 +3,7 @@ import model from '../models/book.model.js'
 async function getAllBooks(_req, res) {
   const books = await model.getAllBooks()
 
-  res.send(books)
+  res.status(200).send(books)
 }
 
 async function getBookById(req, res) {
@@ -15,7 +15,7 @@ async function getBookById(req, res) {
     throw new Error('Book not found: %d', id)
   }
 
-  res.send(book)
+  res.status(200).send(book)
 }
 
 async function createBook(req, res) {
@@ -27,7 +27,7 @@ async function createBook(req, res) {
     throw new Error('Book not created: %o', data)
   }
 
-  res.send('Create book')
+  res.status(201).send(bookCreated)
 }
 
 async function updateBook(req, res) {
@@ -36,15 +36,15 @@ async function updateBook(req, res) {
 
   const book = await model.updateBook(id, data)
 
-  res.send('Update book ' + id)
+  res.status(200).send(book)
 }
 
 async function deleteBook(req, res) {
   const { id } = req.params
 
-  const book = await model.deleteBook(id)
+  await model.deleteBook(id)
 
-  res.send('Delete book ' + id)
+  res.status(200).send('Delete book ' + id)
 }
 
 export default {
