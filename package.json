@@ -16,7 +16,7 @@
     "prisma:seed": "npx prisma db seed"
   },
   "prisma": {
-    "seed": "node prisma/seed/index.js"
+    "seed": "node prisma/seed.js"
   },
   "license": "ISC",
   "devDependencies": {

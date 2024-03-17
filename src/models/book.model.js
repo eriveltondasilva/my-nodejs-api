@@ -2,11 +2,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function getAllBooks() {
-  return await prisma.book.findMany({
-    include: {
-      author: true,
-    },
-  })
+  return await prisma.book.findMany()
 }
 
 async function getBookById(id) {
@@ -14,22 +10,30 @@ async function getBookById(id) {
     where: {
       id: Number(id),
     },
-    include: {
-      author: true,
-    },
   })
 }
 
 async function createBook(data) {
-  //
+  return await prisma.book.create({
+    data,
+  })
 }
 
 async function updateBook(id, data) {
-  //
+  return await prisma.book.update({
+    where: {
+      id: Number(id),
+    },
+    data,
+  })
 }
 
 async function deleteBook(id) {
-  //
+  return await prisma.book.delete({
+    where: {
+      id: Number(id),
+    },
+  })
 }
 
 export default { getAllBooks, getBookById, createBook, updateBook, deleteBook }
