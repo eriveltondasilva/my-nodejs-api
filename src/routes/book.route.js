@@ -3,6 +3,7 @@ import controller from '../controllers/book.controller.js'
 
 const router = Router()
 
+router.param('id', controller.verifyId)
 router.get('/', controller.getAllBooks)
 router.get('/:id', controller.getBookById)
 router.post('/', controller.createBook)
