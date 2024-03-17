@@ -31,7 +31,6 @@ async function main() {
           title: 'Dom Quixote de la Mancha',
           description:
             'Primeiro romance moderno da literatura, a história do Cavaleiro Andante atravessou fronteiras e ganhou diversas formas literárias e artísticas. Cervantes predisse os embaraços da cultura do seu tempo ao retratar uma sociedade já seduzida pelo absolutismo da razão e interesses materiais.',
-          published: 1547,
         },
       ],
     },
@@ -42,7 +41,6 @@ async function main() {
           title: 'Crime e Castigo',
           description:
             'Romance que explora a psicologia de um assassino e as complexidades morais da vida.',
-          published: 1866,
         },
       ],
     },
@@ -53,7 +51,6 @@ async function main() {
           title: 'Odisseia',
           description:
             'Uma das mais antigas e influentes obras da literatura ocidental, que narra a jornada de Odisseu após a Guerra de Troia.',
-          published: 700,
         },
       ],
     },
@@ -64,7 +61,6 @@ async function main() {
           title: 'Cem Anos de Solidão',
           description:
             'Realismo mágico em uma história épica que abrange várias gerações da família Buendía.',
-          published: 1967,
         },
       ],
     },
@@ -75,7 +71,6 @@ async function main() {
           title: 'A Divina Comédia',
           description:
             'Uma das obras-primas da literatura italiana, uma jornada épica através do Inferno, Purgatório e Paraíso.',
-          published: 1320,
         },
       ],
     },
@@ -86,7 +81,6 @@ async function main() {
           title: '1984',
           description:
             'Uma visão distópica de um futuro totalitário, onde o Estado exerce controle absoluto sobre a vida das pessoas.',
-          published: 1949,
         },
       ],
     },
@@ -97,7 +91,6 @@ async function main() {
           title: 'Orgulho e Preconceito',
           description:
             'Um romance clássico que satiriza a sociedade inglesa do século XIX, enquanto narra o romance entre Elizabeth Bennet e Mr. Darcy.',
-          published: 1813,
         },
       ],
     },
@@ -108,7 +101,6 @@ async function main() {
           title: 'O Pequeno Príncipe',
           description:
             'Um conto filosófico que encanta leitores de todas as idades com sua simplicidade e sabedoria.',
-          published: 1943,
         },
       ],
     },
@@ -119,7 +111,6 @@ async function main() {
           title: 'O Apanhador no Campo de Centeio',
           description:
             'Um romance que explora a alienação adolescente e a busca por identidade.',
-          published: 1951,
         },
       ],
     },
@@ -130,7 +121,6 @@ async function main() {
           title: 'Os Miseráveis',
           description:
             'Um épico social que retrata as lutas e redenções de personagens em meio à Revolução Francesa.',
-          published: 1862,
         },
       ],
     },

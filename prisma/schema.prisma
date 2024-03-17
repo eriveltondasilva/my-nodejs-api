@@ -21,7 +21,5 @@ model Book {
   description String?
   author      Author  @relation(fields: [authorId], references: [id])
   authorId    Int
-  published   Int?
-  pageCount   Int?
   genres      String?
 }

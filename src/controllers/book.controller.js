@@ -1,24 +1,30 @@
-function getAllBooks(_, res) {
-  res.send('Get all books')
+import model from '../models/book.model.js'
+
+async function getAllBooks(_, res) {
+  const books = await model.getAllBooks()
+
+  res.send(books)
 }
 
-function getBookById(req, res) {
+async function getBookById(req, res) {
   const { id } = req.params
 
-  res.send('Get book by id: ' + id)
+  const book = await model.getBookById(id)
+
+  res.send(book)
 }
 
-function createBook(_, res) {
+async function createBook(_, res) {
   res.send('Create book')
 }
 
-function updateBook(req, res) {
+async function updateBook(req, res) {
   const { id } = req.params
 
   res.send('Update book ' + id)
 }
 
-function deleteBook(req, res) {
+async function deleteBook(req, res) {
   const { id } = req.params
 
   res.send('Delete book ' + id)
