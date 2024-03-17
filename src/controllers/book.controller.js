@@ -1,13 +1,5 @@
 import model from '../models/book.model.js'
 
-function verifyId(_req, _res, next, id) {
-  if (isNaN(id)) {
-    throw new Error(`Invalid id: ${id}`)
-  }
-
-  next()
-}
-
 async function getAllBooks(_req, res) {
   const books = await model.getAllBooks()
 
@@ -43,7 +35,6 @@ async function deleteBook(req, res) {
 }
 
 export default {
-  verifyId,
   getAllBooks,
   getBookById,
   createBook,

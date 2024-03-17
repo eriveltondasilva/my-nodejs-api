@@ -1,9 +1,10 @@
 import { Router } from 'express'
 import controller from '../controllers/book.controller.js'
+import verifyId from '../middleware/verifyId.js'
 
 const router = Router()
 
-router.param('id', controller.verifyId)
+router.param('id', verifyId)
 router.get('/', controller.getAllBooks)
 router.get('/:id', controller.getBookById)
 router.post('/', controller.createBook)
