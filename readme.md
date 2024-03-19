@@ -1,4 +1,4 @@
-# API Node.js com Prisma e SQLite para Listagem de Livros
+# Unma simples API Node.js com Prisma e SQLite para Listagem de Livros
 
 Este repositório apresenta uma API simples desenvolvida em Node.js, utilizando o ORM Prisma para interagir com um banco de dados SQLite. A principal funcionalidade da API é listar livros armazenados no banco de dados.
 
