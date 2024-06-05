@@ -11,9 +11,8 @@ import server from './server.js'
 const app = express()
 
 middleware(app)
-
 routes(app)
-
 handlerError(app)
-
 server(app)
+
+export default app

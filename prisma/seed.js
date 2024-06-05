@@ -3,13 +3,13 @@ const prisma = new PrismaClient()
 
 async function createBook(book) {
   try {
-    const bookCreated = await prisma.author.create({
+    const bookCreated = await prisma.book.create({
       data: book,
     })
 
     console.log('Livro %s criado com sucesso!', bookCreated.title)
   } catch (error) {
-    console.error('Erro ao criar autor %s: %s', book.title, book.title)
+    console.error('Erro ao criar: %s', book.title)
     throw error
   }
 }
@@ -21,12 +21,6 @@ async function seed() {
       description:
         'Primeiro romance moderno da literatura, a história do Cavaleiro Andante atravessou fronteiras e ganhou diversas formas literárias e artísticas. Cervantes predisse os embaraços da cultura do seu tempo ao retratar uma sociedade já seduzida pelo absolutismo da razão e interesses materiais.',
       author: 'Miguel de Cervantes Saavedra',
-    },
-    {
-      title: 'Crime e Castigo',
-      description:
-        'Romance que explora a psicologia de um assassino e as complexidades morais da vida.',
-      author: 'Fiódor Dostoiévski',
     },
     {
       title: 'Odisseia',

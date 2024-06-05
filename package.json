@@ -8,12 +8,13 @@
     "url": "https://github.com/eriveltondasilva"
   },
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "postinstall": "prisma generate",
     "dev": "node --env-file=.env --watch --no-warnings src/index.js",
-    "prisma:reset": "npx prisma migrate reset",
-    "prisma:seed": "npx prisma db seed"
+    "test": "vitest",
+    "prisma:seed": "npx prisma db seed",
+    "prisma:migrate": "npx prisma migrate dev"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
@@ -21,8 +22,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.28",
+    "prettier": "^3.3.0",
     "prisma": "^5.11.0",
-    "typescript": "^5.4.2"
+    "supertest": "^7.0.0",
+    "typescript": "^5.4.2",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@prisma/client": "^5.11.0",

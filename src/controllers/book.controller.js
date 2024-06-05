@@ -1,4 +1,5 @@
 import model from '../models/book.model.js'
+import ApiError from '../app/api.error.js'
 
 async function getAllBooks(_req, res) {
   const books = await model.getAllBooks()
@@ -12,7 +13,7 @@ async function getBookById(req, res) {
   const book = await model.getBookById(id)
 
   if (!book) {
-    throw new Error('Book not found: %d', id)
+    throw new ApiError(404, 'Book not found')
   }
 
   res.status(200).send(book)
@@ -22,10 +23,6 @@ async function createBook(req, res) {
   const data = req.body
 
   const bookCreated = await model.createBook(data)
-
-  if (!bookCreated) {
-    throw new Error('Book not created: %o', data)
-  }
 
   res.status(201).send(bookCreated)
 }
